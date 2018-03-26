@@ -1,3 +1,12 @@
+#gzip
+
 <ifmodule mod_deflate.c>  
     AddOutputFilter DEFLATE html xml php jpg png js css  
 </ifmodule>  
+
+
+#图片缓存
+
+<FilesMatch ".(gif|jpg|jpeg|png|ico)$">  
+Header set Cache-Control "max-age=3600"  
+</FilesMatch>  
